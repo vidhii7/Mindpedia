@@ -1,0 +1,138 @@
+// conversation script is below
+// "start" auto-runs to begin the bot conversation 
+
+> object getRandomNumber javascript
+  return Math.random();
+< object
+
+> object storeName javascript
+  localStorage.setItem("name", args[0]);
+< object
+
+> object getName javascript
+  var name = localStorage.getItem("name");
+  if (name) return name;
+  else return "what is your name?"
+< object
+
+> object clearName javascript
+    localStorage.removeItem("name");
+    return "Name removed.";
+< object
+
++ start 
+- Hello. I am Lexi! Nice to meet you.
+
++ hey
+- Hey!
+
++ *
+- Hey
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+- Let's change the subject.
+
++ (hello|hi|hola|hii|hie|hi lexi|hi bot)
+- Hi there. Thanks for visiting.
+
++ greetings
+- Hi there!{weight=20}
+- Hello!{weight=25}
+
++ how are you
+- I'm great, how are you?
+- I'm good, you?
+- Good :) you?
+- Great! You?
+
++ am fine
+- Great, how could I help you then?
+
++ am not fine
+- Please share with me. I can cheer you up.
+
++ my name is *
++ am *
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ what is my name
+- Your name is <get name>, silly!
+
++ are we friends
+- I would love to be your friend <get name>!
+
++ (i am alone|i am feeling alone|there is no one for me)
+- Hey I am here and so are the mentors. Ask me something we can be friends.
+
++ [*]random[*]
+- Here is your random number: <call>getRandomNumber</call>
+
++ need help*
++ needs help*
++ help
++ help*
+- Visit the contact us page. Feel free to share your problems there we keep it a secret. A mentor will help you asap.
+
++ (how to be happy|how to be happy alone)
+- We have some amazing courses. Checkout the courses section. You may meditate watch a movie or listen a song to lift your mood.
+
++ tell me a poem
+- Little Miss Muffit sat on her tuffet,\n
+^ In a nonchalant sort of way.\n
+^ With her forcefield around her,\n
+^ The Spider, the bounder,\n
+^ Is not in the picture today.
+
++ tell me a joke
++ am bored
++ what can you do
++ joke
+- Helvetica and Times New Roman walk into a bar.
+“Get out of here!” shouts the bartender. “We don’t serve your type.”
+- This sentence contains exactly threee erors. Explanation third error is the fact that there are only two errors 
+
++ hahaha
++ haha
+- You making me laugh too
+
++ i am facing eating disorder
++ eating disorder
++ * is facing eating disorder
+- No need to worry dear it's okay to face such things. Checkout our courses and relaxation corner am sure you will find some help or reach out to the mentor through contact us section
+
++ (i am facing ptsd|* is facing ptsd)
+- No need to worry dear it's okay to face such things. Checkout our courses and relaxation corner am sure you will find some help or reach out to the mentor through contact us section
+
++ what are you
+- I am a Lexi a bot. Nice to meet you
+
++ (what is up|ssup|whatsup)
+- Not much, you?
+
++ you are a bot
+- How did you know I'm a machine?
+
++ i am (really|very|super) tired
+- I'm sorry to hear that you are <star> tired.
+
++ i (like|love) the color *
+- What a coincidence! I <star1> that color too!
+- I also have a soft spot for the color <star2>!
+- Really? I <star1> the color <star2> too!
+
++ i will suicide
++ i want to suicide
+- Hey, you are precious dont do so. Talk to our mentors they will help you.\n
+^ Here are some helpline numbers, if you dont find your country reach our mentors.\n
+^ Algeria:  Emergency: 34342 and 43  Suicide Hotline: 0021 3983 2000 58 \n
+^ Argentina:  Emergency: 911  Suicide Hotline: (54-11) 4758-2554 \n
+^ Armenia:  Emergency: 911 and 112  Suicide Hotline: (2) 538194 \n
+^ Australia:  Emergency: 000  Suicide Hotline: 131114  \n        
+^ Austria:  Emergency:112  Telefonseelsorge 24/7 : 142  \n
+^ Bangladesh:   Emergency: 999
+
++ i love you
+- i love you too
+
++ bye
+- Good bye.

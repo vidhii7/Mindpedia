@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"> </script>
+</head>
+<style>
+    #banner {
+        background: linear-gradient(rgba(160, 140, 140, 0.5), rgba(200, 38, 233, 0.835)), url(bg.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        isolation: isolate;    
+    }
+    .logo {
+        border: 2px solid grey;
+        border-radius: 100px;
+        position: absolute;
+        height: 81px;
+        width: 81px;
+        top: 4%;
+        left: 7%;
+    }
+    .text {
+        text-align: center;
+        padding-top: 180px;
+        color: white;
+    }
+    .text h1 {
+        font-size: 70px;
+    }
+    .text p {
+        line-height: 0px;
+        font-size: 30px;
+        font-style: italic;
+    }
+    .btn {
+        margin: 70px auto 0;
+    }
+    .btn a {
+        width: 100px;
+        padding: 10px 10px;
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        font-style: bold;
+        border: 3px solid white;
+        display: inline;
+        transition: 0.2s;
+        letter-spacing: 3px;
+    }
+    .btn a:hover {
+        color: #255784;
+        background: #2196f3;
+        box-shadow: 0 0 10px #138ff5, 0 0 40px #258add, 0 0 80px #419be6;
+    }
+/* navbar starts */
+    #nav {
+        height: 100vh;
+        width: 200px;
+        right: -250px;
+        top: 0;
+        position: fixed;
+        background-color: rgba(224, 88, 213, 0.835);
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li {
+        list-style: none;
+        margin: 50px 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover {
+        background-color: rgb(225, 0, 255);
+        border-radius: 30px;
+        width: 50px;
+        padding: 5px;
+        animation-name: vidhi;
+        animation-duration: 2s;
+        animation-direction: reverse;
+        animation-iteration-count: infinite;
+    }
+    #menubtn {
+        width: 50px;
+        height: 50px;
+        background-color: #e226d2d5;
+        text-align: center;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        border-radius: 3px;
+        z-index: 3;
+    }
+    #menubtn img {
+        width: 20px;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+    @media screen and (max-width: 770px) {
+        .text h1 {
+            font-size: 40px;
+        }
+        .btn a {
+            display: block;
+            margin: 20px auto;
+
+        }
+    }
+/* features start */
+    #feature {
+        width: 100%;
+        padding: 70px 0;
+    }
+    .titletext {
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    .titletext p {
+        margin: auto;
+        font-size: 20px;
+        color: #8f0dc2d5;
+        font-weight: bold;
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+    }
+    .titletext p::after {
+        content: '';
+        width: 50px;
+        height: 35px;
+        background: linear-gradient(#b73addd5, white);
+        top: -20px;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        transform: (10deg);
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+    }
+    .titletext h1 {
+        font-size: 50px;
+    }
+    .feature-box {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+    .feat {
+        flex-basis: 50%;
+    }
+    .features-img {
+        flex-basis: 50%S;
+        margin: auto;
+    }
+    .features-img img {
+        width: 70%;
+        border-radius: 20px;
+    }
+    .feat h1 {
+        margin-bottom: 10px;
+        font-weight: 100;
+        color: #e22626d5;
+    }
+    .features-desc {
+        font-family: fangsong;
+    }
+    .featicon .fa {
+        width: 40px;
+        height: 40px;
+        font-size: 35px;
+        color: #e22626d5;
+        border: 1px solid #e22626d5;
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 770px) {
+        .titletext h1 {
+            font-size: 35px;
+        }
+        .feat {
+            flex-basis: 100%;
+        }
+        .features-img {
+            flex-basis: 100%;
+        }
+        .features-img img {
+            width: 100%;
+        }
+    }
+/* services section starts */
+    #services {
+        width: 100%;
+        padding: 70px 0;
+        background: #efefef;
+    }
+    .service-box {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+    }
+    .single-service {
+        flex-basis: 48%;
+        text-align: center;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        padding: 12px;
+        color: white;
+        position: relative;
+    }
+    .single-service img {
+        width: 100%;
+        border-radius: 7px;
+    }
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        transition: .5s;
+    }
+    .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        transform: translateX(-100px) scale(1) skew(-35deg);
+        transition: .5s;
+    }
+    .content {
+        position: absolute;
+        transform: translateY(-50%);
+        padding: 30px 50px;
+        top: 50%;
+        text-align: center;
+    }
+    .content p {
+        color: #fff;
+        transform: scale(2);
+        font-size: 1em;
+        padding: 0;
+        top: 50%;
+        transition: .5s;
+        opacity: 0;
+    }   
+    .single-service:hover .content p {
+        padding: 60px;
+        font-size: 25px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    .single-service:hover img {
+        transform: scale() translateY(-10px);
+    }
+    .single-service:hover .container::before {
+        opacity: 1;
+        background: rgba(255, 0, 255, 0.8);
+        transform: translateY(-20px) scale(0.7) skew(-25deg);
+    }
+   
+    @media screen and (max-width: 770px) {
+
+        .single-service {
+            flex-basis: 100%;
+            margin: 10px;
+        }
+
+        .single-service p {
+            font-size: 12px;
+        }
+
+        .single-service img {
+            width: 110%;
+            height: 110%;
+        }
+
+        .single-service:hover .container {
+            margin: 20px;
+        }
+
+        .single-service:hover .content {
+            width: 90%;
+        }
+
+        .single-service:hover .container .content p {
+            font-size: 17px;
+            margin: 10px;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+    }
+ /* testemonial section starts */
+    #testemonial{
+        width: 100%;
+        padding: 70px 0;
+        background: rgb(243, 240, 240);
+    }
+    .testemonial-row{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .testemonial-col{
+        flex-basis: 30%;
+        padding: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 20px rgb(47, 175, 226);
+        cursor: pointer;
+        transition: transform .5s;
+    }
+    .testemonial-col p{
+        font-size: 14px;
+    }
+    .user{
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .user img{
+        width: 50px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    .user-info .fa{
+        margin-left: 10px;
+        color: #27c0ff;
+        font-size: 20px;
+    }
+    .user-info small{
+        color: #009688;
+    }
+    .testemonial:hover{
+        transform: translateY(-7px);
+    }
+    @media screen and (max-width: 770px) {
+        .testemonial-col{
+            flex-basis: 100%
+            ;
+        }
+    }
+/* contact us */
+  #contactus{
+      padding: 100px 0 20px;
+      background: #f0eeee;
+  }
+  .footer-row{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .footer-left, .footer-right{
+      flex-basis: 45%;
+      padding: 10px;
+      margin-bottom: 20px;
+   }
+   .footer-form{
+            text-align: center;
+        }
+        .footer-form input:hover{
+            background-color: rgb(200, 167, 238);
+            transform: translateX(-7px);
+        }
+        .footer-form input[type="text"]{
+            width: 150px;
+            height: 20px;
+        }
+        .footer-form input[type="adress"]{
+            width: 170px;
+            height: 20px;
+        }
+        .footer-form input[type="address"]{
+            width: 150px;
+            height: 50px;
+        }
+        .footer-form input[type="submit"]{
+            width: 100px;
+            border-radius: 40px;
+            margin: 10px;
+            padding: 10px;
+            background: linear-gradient(white,#c35cf3d5);
+        }
+        
+        .footer-row {
+            text-align: center;
+            /* margin: -10px 220px; */
+            justify-content: center;
+        }
+        .footer-row .fa {
+            background: black;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 43px;
+            border-radius: 40px;
+            margin: 176px 23px 43px;
+            padding: 13px;
+            transition: 0.5s;
+            isolation: isolate;
+        }
+        .footer-row .fa:hover{
+            background: linear-gradient(rgba(0, 0, 0,0.5),#e226c9d5);
+            transform: translateY(-7px);
+        }
+    
+        #facebook{
+            color: rgb(0, 26, 255);
+            border: 1px solid rgb(17, 0, 255);
+            box-shadow: 8px 8px 6px  rgb(49, 60, 214);
+            isolation: isolate;
+        }
+        #instagram{
+            color: rgb(247, 0, 255);
+            border: 1px solid rgb(255, 0, 234);
+            box-shadow: 8px 8px 6px  rgb(208, 49, 214);
+            isolation: isolate;
+        }
+        #gmail{
+            color: red;
+            border: 1px solid red;
+            box-shadow: 8px 8px 6px  rgb(214, 49, 49);
+            isolation: isolate;
+        }
+        #whatsapp{
+            color: rgb(0, 255, 42);
+            border: 1px solid rgb(0, 255, 42);
+            box-shadow: 8px 8px 6px  rgb(58, 195, 65);
+            isolation: isolate;
+        }
+        .foot{
+            margin: 0 auto;
+        }
+</style>
+<body>
+    <!-- home page and logo -->
+    <section id="banner">
+        <img src="logo.jpg" class="logo">
+        <div class="text">
+            <h1>Mindpedia</h1>
+            <p> Your mental health experts</p>
+            <div class="btn">
+                <a href="relax.html"><strong>GET SOME PEACE</strong></a>
+                <a href="courses.html"><strong>BROWSE COURSES</strong> </a>
+            </div>
+        </div>
+    </section>
+    <!-- navbar -->
+    <div id="nav">
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="bot.html">Meet Lexi</a></li>
+                <li><a href="courses.html">View Courses</a></li>
+                <li><a href="relax.html">Relaxation corner</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testemonial">Testemonials</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="login.html">Login</a><a href="signup.html">/Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- menu button -->
+    <div id="menubtn">
+        <img src="menu2.png" id="menu">
+    </div>
+    <!-- services  -->
+    <section id="services">
+        <div class="titletext">
+            <p>SERVICES</p>
+            <h1>What do we help you with?</h1>
+        </div>
+        <div class="service-box">
+            <div class="single-service">
+                <img src="serv1.jpg" height="350">
+                <div class="container">
+                    <div class="content">
+                        <p><strong>RELAXATION CORNER</strong><br>
+                            We provide you with a relaxation corner
+                            so read articles and listen to our 
+                            selected spotify playlists and relax.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="serv2.jpg" height="350">
+                <div class="container">
+                    <div class="content">
+                        <p><strong>MENTOR SUPPORT</strong><br>
+                            Our mentors are always there to support
+                           you. In the contact us section describe your problem
+                           a mentor will be assigned.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="serv3.jpg" height="350">
+                <div class="container">
+                    <div class="content">
+                        <p><strong>NO USAGE FEE</strong><br>
+                            Our mentors are volunteers from around 
+                            the world. They are dedicated to help.
+                            you free of cost</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="serv4.jpg" height="350">
+                <div class="container">
+                    <div class="content">
+                        <p><strong>MEET LEXI OUR CHATBOT</strong><br>
+                            Lexi is trained to guide you in your  
+                            difficult times. Ask for a joke, a poem, a song!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testsemonial -->
+    <section id="testemonial">
+        <div class="titletext">
+            <p>TESTEMONIALS</p>
+                <h1>Feedback from our users</h1>
+        </div>
+        <div class="testemonial-row">
+            <div class="testmonial-col">
+                <div class="user">
+                    <img src="test1.jpg" alt="">
+                    <div class="user-info">
+                        <h4>Joey Hansome<i class="fa fa-twitter"></i></h4>
+                        <small>@joeyhansome</small>
+                    </div>
+                </div>
+                <p>Had amazing experience in this site<br>
+                   Took up the beat procastination course<br>
+                    and I was amazed to see the results in me.
+                </p>
+            </div>
+            <div class="testmonial-col"> 
+                <div class="user">
+                    <img src="test2.jpg" alt="">
+                    <div class="user-info">
+                        <h4>Lisa Ferns<i class="fa fa-twitter"></i></h4>
+                        <small>@lisaferns</small>
+                    </div>
+                </div>             
+                  <p>A proud user of mindpedia from<br>
+                    london! NO doubts they provide the <br>
+                    best courses and uninterrupted help anytime.
+                </p>
+            </div>
+            <div class="testmonial-col">
+                <div class="user">
+                    <img src="test3.jpg" alt="">
+                    <div class="user-info">
+                        <h4>Ben Dsouza<i class="fa fa-twitter"></i></h4>
+                        <small>@bend007</small>
+                    </div>
+                </div>            
+                    <p>The be happy course with mindpedia <br>
+                        was awseome! Now I can be happy<br>
+                        alone in the guidance of the mentors 
+                        provided by them.
+                    </p>
+            </div>
+        </div>
+    </section>
+    <!-- contact us -->
+    <section id="contactus">
+        <div class="titletext">
+            <p>CONTACT US</p>
+            <h1>Reach out to us it's safe</h1>
+        </div>
+        <div class="footer-form">
+            <label><strong>Name</strong> (required)</label><br>
+            <input type="text"> <br><br>
+            <label><strong>Email Address</strong> (required)</label><br>
+            <input type="adress"> <br><br>
+            <label><strong>What problem are you facing?</strong> </label><br>
+            <input type="address"> <br><br>
+            <input type="radio">Can we Call?<br>
+             <input type="radio">Can we mail?<br>
+            <input type="submit"><br>
+        </div>
+        
+        <div class="footer-row">
+           <a href="#"> <i class="fa fa-facebook-square" id="facebook" ></i></a>
+            <a href="#"><i class="fa fa-instagram" id="instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope" id="gmail"></i></a>
+            <a href="#"><i class="fa fa-whatsapp" id="whatsapp"></i></a><br><br>
+        </div>
+            <div class="foot">
+                Copyrights 2021 | Mindpedia Co.
+            </div>     
+    </div>
+    </section>
+    <!-- scripting the responsive nav menu -->
+    <script>
+        var menubtn = document.getElementById("menubtn")
+        var nav = document.getElementById("nav")
+        var menu = document.getElementById("menu")
+
+        nav.style.right == "-250px"
+
+        menubtn.onclick = function () {
+            if (nav.style.right == "-250px") {
+                nav.style.right = "0px"
+                menu.src = "clo.svg"
+            }
+            else {
+                nav.style.right = "-250px"
+                menu.src = "menu2.png"
+            }
+        }
+    </script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 500,
+	speedAsDuration: true
+});
+    </script>
+    <script src="script.js"> </script>
+</body>
+</html>

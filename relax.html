@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,800;1,500;1,700&display=swap');
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(#f00,#f0f);
+    }
+    body::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#2196f3,#e91e63);
+        clip-path: circle(20% at 10% 10%);  
+    }
+    .container {
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       max-width: 1200px;
+       flex-wrap: wrap;
+       z-index: 1;
+    }
+    .container .card {
+       position: relative;
+       width: 280px;
+       height: 400px;
+       margin: 30px;
+       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+       border-radius: 15px;
+       background: rgba(255,255,255,0.1);
+       overflow: hidden;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border-top: 1px solid rgba(255,255,255,0.5);
+       border-left: 1px solid rgba(255,255,255,0.5);
+       backdrop-filter: blur(5px);
+    }
+    .container .card .content {
+        padding: 20px;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .container .card .content h3 {
+        font-size: 1.8em;
+        color: #fff;
+        z-index: 1;
+    }
+    .container .card .content p {
+        color: #fff;
+        font-size: 1em;
+        font-weight: 300;   
+    }
+    .container .card .content a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        margin-top: 15px;
+        background: #fff;
+        color: black;
+        text-decoration: none;
+        border-radius: 18px;
+        font-weight: 500;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    </style>
+</head>
+<body>
+    <!-- blogs section -->
+    <section class="blogs">
+       <div class="container">
+           <div class="card">
+               <div class="content">
+                <h2>01</h2>
+                <h3>How to to enjoy small things in life?</h3>
+                <p>We got you! Read this blog from Relive on Monsoon. Reduce stress and be more happy!
+                </p>
+                <a href="https://letsspeaktoday.wordpress.com/2020/07/12/monsoon/">Read More</a>
+               </div>
+           </div>
+
+           <div class="card">
+              <div class="content">
+                <h2>02</h2>
+                <h3>What to do for Eating disorder?</h3>
+                <p>This is one of the best treatement plan we found for you. It got home therapies too!
+                </p>
+                <a href="https://www.mayoclinic.org/diseases-conditions/eating-disorders/in-depth/eating-disorder-treatment/art-20046234">Read More</a>
+              </div>
+           </div>
+
+        <div class="card">
+            <div class="content">
+             <h2>03</h2>
+             <h3>Some ideas to be more enthusiastic?</h3>
+             <p>We have got something amazing for you from Relive! Check this Art=Enthusiasm!
+             </p>
+             <a href="https://letsspeaktoday.wordpress.com/2020/09/23/art-enthusiasm/">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+             <h2>04</h2>
+             <h3>How to live a healthy life?</h3>
+             <p>Do you wake up feeling sluggish most mornings?
+                Here are 7 major tips to live a healthy lifestyle!
+             </p>
+             <a href="https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/7-tips-to-live-a-happier-life">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+             <h2>05</h2>
+             <h3>Mindset to happiness</h3>
+             <p>Happiness and laughter is all you need in life.
+                Learn to be happy alone. Life is an exciting journey </p>
+             <a href="https://www.td.org/insights/4-habits-to-help-you-cultivate-a-happy-mindset">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+             <h2>06</h2>
+             <h3>What is ptsd?</h3>
+             <p> PTSD is a mental health condition that's triggered by a terrifying event !</p>
+             <a href="https://www.mayoclinic.org/diseases-conditions/post-traumatic-stress-disorder/symptoms-causes/syc-20355967">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+             <h2>07</h2>
+             <h3>Spotify Playlist:<img src="https://img.icons8.com/fluency/48/000000/spotify.png"/></h3>
+             <p>Distress your mind with the lofi beats splaylist!
+             </p>
+             <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn">Listen</a>
+            </div>
+        </div>
+       
+        <div class="card">
+            <div class="content">
+             <h2>08</h2>
+             <h3>Spotify Playlist:<img src="https://img.icons8.com/fluency/48/000000/spotify.png"/></h3>
+             <p>Headphones on, Forget the world!
+             </p>
+             <a href=" https://open.spotify.com/playlist/37i9dQZF1DX5D8j6p4CXZT">Listen</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="content">
+             <h2>09</h2>
+             <h3>Spotify Playlist:<img src="https://img.icons8.com/fluency/48/000000/spotify.png"/></h3>
+             <p>Relax and Unwind your mind! Uplift your mood!
+             </p>
+             <a href="https://open.spotify.com/playlist/37i9dQZF1DWU0ScTcjJBdj">Listen</a>
+            </div>
+        </div>
+       </div>
+    
+</body>
+</html>
